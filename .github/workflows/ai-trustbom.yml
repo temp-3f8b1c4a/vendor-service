@@ -1,4 +1,4 @@
-# trustbom-generated: version=1.0.0-dev.465 sha256=e95b21417513cbd68c64a4ecc5c620a47d3d47581b053e33e1be531645d9ba5c
+# trustbom-generated: version=1.0.0-dev.466 sha256=8d8d1a9e2523f6efe73b6f83ce52e2e5c52defc88ed502d9f1925714d0dda5a6
 name: AI TrustBOM
 
 on:
@@ -25,18 +25,6 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Prepare unsigned approval bootstrap
-        shell: bash
-        run: |
-          if grep --fixed-strings --line-regexp --quiet \
-              '# AI TrustBOM unsigned approval template' \
-              trust/approvals.yml \
-            && ! grep --extended-regexp --quiet \
-              '^[[:space:]]*[^#[:space:]]' \
-              trust/approvals.yml; then
-            rm trust/approvals.yml
-          fi
-
       - name: Scan and gate
         uses: ./.github/actions/trustbom
         env:
@@ -61,18 +49,6 @@ jobs:
       - name: Install AI TrustBOM
         id: install
         uses: ./.github/actions/trustbom/install
-
-      - name: Prepare unsigned approval bootstrap
-        shell: bash
-        run: |
-          if grep --fixed-strings --line-regexp --quiet \
-              '# AI TrustBOM unsigned approval template' \
-              trust/approvals.yml \
-            && ! grep --extended-regexp --quiet \
-              '^[[:space:]]*[^#[:space:]]' \
-              trust/approvals.yml; then
-            rm trust/approvals.yml
-          fi
 
       - name: Validate pushed graph and approval
         shell: bash
