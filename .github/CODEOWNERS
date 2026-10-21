@@ -1,0 +1,6 @@
+# Trust owns approvals, review rules and the workflow/Action surface.
+/trust/approvals.yml @trustbom-trust
+/.github/CODEOWNERS @trustbom-trust
+/.github/workflows/ @trustbom-trust
+/.github/actions/trustbom/ @trustbom-trust
+/.trustbom-test/ @trustbom-trust

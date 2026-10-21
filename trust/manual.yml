@@ -1,0 +1,6 @@
+# Add only facts that repository detection cannot observe.
+# Every declaration requires a reason.
+not_in_scope: []
+models: []
+tools: []
+data_classes: []

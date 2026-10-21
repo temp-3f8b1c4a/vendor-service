@@ -1,0 +1,8 @@
+# AI TrustBOM unsigned approval template
+# Run `trustbom scan`, review trust/card.md and its cited evidence, then
+# replace these comments with the approval template printed by `trustbom gate`.
+# approved_graph_sha: <full reviewed graph fingerprint (64 lowercase hex characters)>
+# approved_by: <Trust reviewer>
+# approved_at: <ISO-8601 timestamp with offset>
+# high_risk: unset
+# article_50: unset
