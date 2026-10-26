@@ -1,6 +1,26 @@
 # Add only facts that repository detection cannot observe.
 # Every declaration requires a reason.
 not_in_scope: []
-models: []
+models:
+  - provider: anthropic
+    model_id: claude-sonnet-4-5
+    region: eu-central-1
+    reason: Synthetic deployment declared for this manual test.
 tools: []
 data_classes: []
+prompt_bodies_stored:
+  value: false
+  reason: Synthetic test policy stores request identifiers only.
+human_send_required:
+  value: true
+  reason: Synthetic service requires a human to send each response.
+kill_switch:
+  value: true
+  reason: Synthetic service has an AI disable switch.
+data_handling:
+  - provider: anthropic
+    retention: 30
+    training_use: none
+    deletion_path: trust/deletion-anthropic.md
+    evidence_path: trust/dpas/anthropic.txt
+    reason: Synthetic enterprise terms reviewed for this test only.
