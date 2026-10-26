@@ -17,7 +17,7 @@ runs:
       id: install
       shell: bash
       env:
-        TRUSTBOM_PINNED_VERSION: "1.0.0-dev.466"
+        TRUSTBOM_PINNED_VERSION: "1.0.0-dev.485"
       run: |
         set -euo pipefail
         version="${TRUSTBOM_ACTION_VERSION:-$TRUSTBOM_PINNED_VERSION}"
