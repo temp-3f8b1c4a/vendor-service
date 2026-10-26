@@ -1,4 +1,4 @@
-# trustbom-generated: version=1.0.0-dev.466 sha256=8d8d1a9e2523f6efe73b6f83ce52e2e5c52defc88ed502d9f1925714d0dda5a6
+# trustbom-generated: version=1.0.0-dev.485 sha256=e67a75d953e7e08fc5025d29e8f1b8e17e4dabf79c56cda74621c5984a30336e
 name: AI TrustBOM
 
 on:
@@ -45,6 +45,7 @@ jobs:
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
           fetch-depth: 0
+          persist-credentials: false
 
       - name: Install AI TrustBOM
         id: install
