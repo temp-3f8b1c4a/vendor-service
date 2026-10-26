@@ -1,0 +1,189 @@
+{
+  "schema_version": 2,
+  "hash_version": 1,
+  "graph_sha": "8e478971e5342d1e1c442287c245561de7add4db2380a27422acd75a775bd5e6",
+  "system": {
+    "name": "vendor-service",
+    "description": "Disposable AI TrustBOM manual-test vendor service",
+    "customer_facing_name": "Vendor Service"
+  },
+  "repo": "vendor-service",
+  "commit": "d7b48ccb4b26924b128ffc915c831a18f5f731e4",
+  "scanned_at": "2026-10-26T10:51:06.9901464+00:00",
+  "cli_version": "1.0.0",
+  "detector_packs": [
+    {
+      "name": "assist-dotnet",
+      "version": "1.0.0"
+    },
+    {
+      "name": "assist-go",
+      "version": "1.0.0"
+    },
+    {
+      "name": "assist-java",
+      "version": "1.0.0"
+    },
+    {
+      "name": "assist-js",
+      "version": "1.7.0"
+    },
+    {
+      "name": "assist-python",
+      "version": "1.4.0"
+    },
+    {
+      "name": "data-processing",
+      "version": "1.0.0"
+    },
+    {
+      "name": "raw-http",
+      "version": "1.0.0"
+    }
+  ],
+  "models": [
+    {
+      "provider": "anthropic",
+      "model_id": "claude-sonnet-4-5",
+      "region": "eu-central-1",
+      "source": "manual",
+      "evidence": [
+        {
+          "path": "trust/manual.yml",
+          "start_line": 5
+        }
+      ]
+    }
+  ],
+  "tools": [],
+  "mcp_servers": [],
+  "data_flows": [],
+  "controls": [
+    {
+      "name": "human_send_required",
+      "value": true,
+      "source": "manual",
+      "evidence": [
+        {
+          "path": "trust/manual.yml",
+          "start_line": 14
+        }
+      ]
+    },
+    {
+      "name": "kill_switch",
+      "value": true,
+      "source": "manual",
+      "evidence": [
+        {
+          "path": "trust/manual.yml",
+          "start_line": 17
+        }
+      ]
+    },
+    {
+      "name": "prompt_bodies_stored",
+      "value": false,
+      "source": "manual",
+      "evidence": [
+        {
+          "path": "trust/manual.yml",
+          "start_line": 11
+        }
+      ]
+    }
+  ],
+  "eval_gates": [],
+  "eval_results": [],
+  "subprocessors": [
+    {
+      "provider": "anthropic",
+      "party": "Anthropic",
+      "purpose": "Synthetic model inference",
+      "location": "Ireland",
+      "dpa_path": "trust/dpas/anthropic.txt",
+      "source": "manual",
+      "evidence": [
+        {
+          "path": "trust/dpas/anthropic.txt"
+        },
+        {
+          "path": "trust/subprocessors.yml",
+          "start_line": 2
+        }
+      ]
+    }
+  ],
+  "data_handling": [
+    {
+      "provider": "anthropic",
+      "retention": "days",
+      "retention_days": 30,
+      "training_use": "none",
+      "deletion_path": "trust/deletion-anthropic.md",
+      "source": "manual",
+      "evidence": [
+        {
+          "path": "trust/deletion-anthropic.md",
+          "start_line": 1
+        },
+        {
+          "path": "trust/dpas/anthropic.txt",
+          "start_line": 1
+        },
+        {
+          "path": "trust/manual.yml",
+          "start_line": 21
+        }
+      ]
+    }
+  ],
+  "findings": [],
+  "classification": {
+    "role": "unknown",
+    "gpai_provider": false,
+    "high_risk": "unknown",
+    "article_50": "unknown"
+  },
+  "coverage": {
+    "detector_packs": [
+      {
+        "name": "assist-dotnet",
+        "version": "1.0.0"
+      },
+      {
+        "name": "assist-go",
+        "version": "1.0.0"
+      },
+      {
+        "name": "assist-java",
+        "version": "1.0.0"
+      },
+      {
+        "name": "assist-js",
+        "version": "1.7.0"
+      },
+      {
+        "name": "assist-python",
+        "version": "1.4.0"
+      },
+      {
+        "name": "data-processing",
+        "version": "1.0.0"
+      },
+      {
+        "name": "raw-http",
+        "version": "1.0.0"
+      }
+    ],
+    "ecosystems": [],
+    "not_in_scope": [],
+    "method_limits": [
+      "allowlisted_configuration_patterns",
+      "manifest_and_lockfile_inventory",
+      "no_ast_analysis",
+      "no_runtime_inspection",
+      "tracked_files_only"
+    ]
+  }
+}
