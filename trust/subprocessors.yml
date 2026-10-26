@@ -1,0 +1,6 @@
+subprocessors:
+  - provider: anthropic
+    party: Anthropic
+    purpose: Synthetic model inference
+    location: Ireland
+    dpa_path: trust/dpas/anthropic.txt
