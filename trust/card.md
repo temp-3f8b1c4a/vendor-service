@@ -6,7 +6,7 @@
 
 - **System:** vendor-service
 - **Repository:** `vendor-service`
-- **Commit:** `8429ef4fa3e74c34c56a70f200658b87d95fb41d`
+- **Commit:** `893f666cb556724314ca6c914f0c02b92b5c2853`
 - **Graph fingerprint:** `efc2dca15727`
 - **Full fingerprint (SHA-256):** `efc2dca157274f8273e09d48771a47604baf0000c3a2f1ea434f551707bdf1e9`
 - **CLI version:** `1.0.0`
@@ -118,5 +118,19 @@ Ecosystems are recognised from tracked manifest and lockfile names only; an ecos
 
 ## Generated from
 
-Commit `8429ef4fa3e74c34c56a70f200658b87d95fb41d` using AI TrustBOM CLI `1.0.0`.
+Commit `893f666cb556724314ca6c914f0c02b92b5c2853` using AI TrustBOM CLI `1.0.0`.
+
+## Gate assessment
+
+- **Status:** passed
+- **Summary:** The current graph matches its approval and has no blocking policy conditions.
+
+### Semantic changes
+
+- Added model openai / gpt-4o.
+- Added medium finding subprocessor-undeclared.
+
+### Next step
+
+No approval action is required.
 
