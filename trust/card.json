@@ -1,15 +1,15 @@
 {
   "schema_version": 2,
   "hash_version": 1,
-  "graph_sha": "efc2dca157274f8273e09d48771a47604baf0000c3a2f1ea434f551707bdf1e9",
+  "graph_sha": "fbec3a3585c1dc4859a08a0ba2e7f3df13a8042a1eb1acbc6fb0707e9e033297",
   "system": {
     "name": "vendor-service",
     "description": "Disposable AI TrustBOM manual-test vendor service",
     "customer_facing_name": "Vendor Service"
   },
   "repo": "vendor-service",
-  "commit": "893f666cb556724314ca6c914f0c02b92b5c2853",
-  "scanned_at": "2026-10-27T16:06:37.351405+00:00",
+  "commit": "83d4c38e976b9b45ce4a8ef973b91f201f47ae82",
+  "scanned_at": "2026-10-27T16:14:05.7161868+00:00",
   "cli_version": "1.0.0",
   "detector_packs": [
     {
@@ -57,7 +57,7 @@
     {
       "provider": "openai",
       "model_id": "gpt-4o",
-      "region": "eu-west-1",
+      "region": "us-east-1",
       "source": "manual",
       "evidence": [
         {

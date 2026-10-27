@@ -8,7 +8,7 @@ models:
     reason: Synthetic deployment declared for this manual test.
   - provider: openai
     model_id: gpt-4o
-    region: eu-west-1
+    region: us-east-1
     reason: Synthetic model for MTP-18.
 tools: []
 data_classes: []
