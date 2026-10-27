@@ -6,7 +6,7 @@
 
 - **System:** vendor-service
 - **Repository:** `vendor-service`
-- **Commit:** `83d4c38e976b9b45ce4a8ef973b91f201f47ae82`
+- **Commit:** `cbe1060e428862456dd438e7bf59f6e44952a36d`
 - **Graph fingerprint:** `fbec3a3585c1`
 - **Full fingerprint (SHA-256):** `fbec3a3585c1dc4859a08a0ba2e7f3df13a8042a1eb1acbc6fb0707e9e033297`
 - **CLI version:** `1.0.0`
@@ -118,37 +118,19 @@ Ecosystems are recognised from tracked manifest and lockfile names only; an ecos
 
 ## Generated from
 
-Commit `83d4c38e976b9b45ce4a8ef973b91f201f47ae82` using AI TrustBOM CLI `1.0.0`.
+Commit `cbe1060e428862456dd438e7bf59f6e44952a36d` using AI TrustBOM CLI `1.0.0`.
 
 ## Gate assessment
 
-- **Status:** failed
-- **Summary:** The gate is blocked by 1 condition.
+- **Status:** passed
+- **Summary:** The current graph matches its approval and has no blocking policy conditions.
 
 ### Semantic changes
 
 - Added model openai / gpt-4o.
 - Added medium finding subprocessor-undeclared.
 
-### Required actions
-
-#### The approved graph does not match this change
-
-Trust approved fingerprint efc2dca15727, but this branch produces fbec3a3585c1.
-
-Choose the appropriate resolution:
-
-- Revert or correct unintended AI-system changes.
-- Add a reasoned manual declaration when repository evidence is incomplete.
-- If the changes are intended, have Trust review the semantic changes and complete graph before approving the current fingerprint.
-
-Example:
-
-```yaml
-approved_graph_sha: fbec3a3585c1dc4859a08a0ba2e7f3df13a8042a1eb1acbc6fb0707e9e033297
-```
-
 ### Next step
 
-Resolve every blocking condition below, then rerun AI TrustBOM.
+No approval action is required.
 

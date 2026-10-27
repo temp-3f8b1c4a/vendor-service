@@ -8,8 +8,8 @@
     "customer_facing_name": "Vendor Service"
   },
   "repo": "vendor-service",
-  "commit": "83d4c38e976b9b45ce4a8ef973b91f201f47ae82",
-  "scanned_at": "2026-10-27T16:14:05.7161868+00:00",
+  "commit": "cbe1060e428862456dd438e7bf59f6e44952a36d",
+  "scanned_at": "2026-10-27T16:15:48.5924213+00:00",
   "cli_version": "1.0.0",
   "detector_packs": [
     {
