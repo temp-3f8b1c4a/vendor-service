@@ -1,15 +1,15 @@
 {
   "schema_version": 2,
   "hash_version": 1,
-  "graph_sha": "8e478971e5342d1e1c442287c245561de7add4db2380a27422acd75a775bd5e6",
+  "graph_sha": "efc2dca157274f8273e09d48771a47604baf0000c3a2f1ea434f551707bdf1e9",
   "system": {
     "name": "vendor-service",
     "description": "Disposable AI TrustBOM manual-test vendor service",
     "customer_facing_name": "Vendor Service"
   },
   "repo": "vendor-service",
-  "commit": "d7b48ccb4b26924b128ffc915c831a18f5f731e4",
-  "scanned_at": "2026-10-26T10:51:06.9901464+00:00",
+  "commit": "8429ef4fa3e74c34c56a70f200658b87d95fb41d",
+  "scanned_at": "2026-10-27T15:57:38.6070496+00:00",
   "cli_version": "1.0.0",
   "detector_packs": [
     {
@@ -53,6 +53,18 @@
           "start_line": 5
         }
       ]
+    },
+    {
+      "provider": "openai",
+      "model_id": "gpt-4o",
+      "region": "eu-west-1",
+      "source": "manual",
+      "evidence": [
+        {
+          "path": "trust/manual.yml",
+          "start_line": 9
+        }
+      ]
     }
   ],
   "tools": [],
@@ -66,7 +78,7 @@
       "evidence": [
         {
           "path": "trust/manual.yml",
-          "start_line": 14
+          "start_line": 18
         }
       ]
     },
@@ -77,7 +89,7 @@
       "evidence": [
         {
           "path": "trust/manual.yml",
-          "start_line": 17
+          "start_line": 21
         }
       ]
     },
@@ -88,7 +100,7 @@
       "evidence": [
         {
           "path": "trust/manual.yml",
-          "start_line": 11
+          "start_line": 15
         }
       ]
     }
@@ -133,12 +145,26 @@
         },
         {
           "path": "trust/manual.yml",
-          "start_line": 21
+          "start_line": 25
         }
       ]
     }
   ],
-  "findings": [],
+  "findings": [
+    {
+      "id": "subprocessor-undeclared",
+      "severity": "medium",
+      "message": "Provider \u0027openai\u0027 has no declared subprocessor.",
+      "source": "inferred",
+      "evidence": [
+        {
+          "path": "trust/manual.yml",
+          "start_line": 9
+        }
+      ],
+      "subject": "openai"
+    }
+  ],
   "classification": {
     "role": "unknown",
     "gpai_provider": false,
