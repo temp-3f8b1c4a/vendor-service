@@ -6,6 +6,10 @@ models:
     model_id: claude-sonnet-4-5
     region: eu-central-1
     reason: Synthetic deployment declared for this manual test.
+  - provider: openai
+    model_id: gpt-4o
+    region: eu-west-1
+    reason: Synthetic extra model to exercise the gate (o4 test).
 tools: []
 data_classes: []
 prompt_bodies_stored:
