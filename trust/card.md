@@ -6,9 +6,9 @@
 
 - **System:** vendor-service
 - **Repository:** `vendor-service`
-- **Commit:** `893f666cb556724314ca6c914f0c02b92b5c2853`
-- **Graph fingerprint:** `efc2dca15727`
-- **Full fingerprint (SHA-256):** `efc2dca157274f8273e09d48771a47604baf0000c3a2f1ea434f551707bdf1e9`
+- **Commit:** `83d4c38e976b9b45ce4a8ef973b91f201f47ae82`
+- **Graph fingerprint:** `fbec3a3585c1`
+- **Full fingerprint (SHA-256):** `fbec3a3585c1dc4859a08a0ba2e7f3df13a8042a1eb1acbc6fb0707e9e033297`
 - **CLI version:** `1.0.0`
 - **Description:** Disposable AI TrustBOM manual-test vendor service
 - **Customer-facing name:** Vendor Service
@@ -25,7 +25,7 @@
 | Provider | Model | Region | Endpoint | Source | Cite |
 |---|---|---|---|---|---|
 | anthropic | claude-sonnet-4-5 | eu-central-1 | unknown | manual | `trust/manual.yml:5` |
-| openai | gpt-4o | eu-west-1 | unknown | manual | `trust/manual.yml:9` |
+| openai | gpt-4o | us-east-1 | unknown | manual | `trust/manual.yml:9` |
 
 ## Declared subprocessors
 
@@ -118,19 +118,37 @@ Ecosystems are recognised from tracked manifest and lockfile names only; an ecos
 
 ## Generated from
 
-Commit `893f666cb556724314ca6c914f0c02b92b5c2853` using AI TrustBOM CLI `1.0.0`.
+Commit `83d4c38e976b9b45ce4a8ef973b91f201f47ae82` using AI TrustBOM CLI `1.0.0`.
 
 ## Gate assessment
 
-- **Status:** passed
-- **Summary:** The current graph matches its approval and has no blocking policy conditions.
+- **Status:** failed
+- **Summary:** The gate is blocked by 1 condition.
 
 ### Semantic changes
 
 - Added model openai / gpt-4o.
 - Added medium finding subprocessor-undeclared.
 
+### Required actions
+
+#### The approved graph does not match this change
+
+Trust approved fingerprint efc2dca15727, but this branch produces fbec3a3585c1.
+
+Choose the appropriate resolution:
+
+- Revert or correct unintended AI-system changes.
+- Add a reasoned manual declaration when repository evidence is incomplete.
+- If the changes are intended, have Trust review the semantic changes and complete graph before approving the current fingerprint.
+
+Example:
+
+```yaml
+approved_graph_sha: fbec3a3585c1dc4859a08a0ba2e7f3df13a8042a1eb1acbc6fb0707e9e033297
+```
+
 ### Next step
 
-No approval action is required.
+Resolve every blocking condition below, then rerun AI TrustBOM.
 
