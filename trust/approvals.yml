@@ -6,8 +6,14 @@
 # approved_at: <ISO-8601 timestamp with offset>
 # high_risk: unset
 # article_50: unset
-approved_graph_sha: 8e478971e5342d1e1c442287c245561de7add4db2380a27422acd75a775bd5e6
+approved_graph_sha: fbec3a3585c1dc4859a08a0ba2e7f3df13a8042a1eb1acbc6fb0707e9e033297
 approved_by: "trustbom-trust"
 approved_at: 2026-10-26T11:13:37Z
 high_risk: unset
 article_50: unset
+
+waivers:
+  - finding_id: subprocessor-undeclared
+    reason: Synthetic fixture, accepted for this test.
+    until: 2099-12-31
+    by: trust@example.com

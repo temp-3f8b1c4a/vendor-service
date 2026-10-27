@@ -1,5 +1,5 @@
 status: "draft (unapproved)"
-graph_sha: "8e478971e5342d1e1c442287c245561de7add4db2380a27422acd75a775bd5e6"
+graph_sha: "fbec3a3585c1dc4859a08a0ba2e7f3df13a8042a1eb1acbc6fb0707e9e033297"
 questions:
   - id: Q1_do_you_use_ai
     question: "Do you use AI?"
@@ -8,13 +8,15 @@ questions:
       - "trust/manual.yml"
     evidence:
       - "trust/manual.yml:5"
+      - "trust/manual.yml:9"
   - id: Q2_models_and_vendors
     question: "Which models and vendors are used?"
-    answer: "anthropic: claude-sonnet-4-5"
+    answer: "anthropic: claude-sonnet-4-5; openai: gpt-4o"
     cite:
       - "trust/manual.yml"
     evidence:
       - "trust/manual.yml:5"
+      - "trust/manual.yml:9"
   - id: Q3_is_customer_data_used_to_train
     question: "Is customer data used to train?"
     answer: "Provider training use is declared per provider in Q10_provider_training_use; training by the vendor itself is not declared."
@@ -22,7 +24,7 @@ questions:
     evidence: []
   - id: Q4_inference_region
     question: "Where does inference run?"
-    answer: "anthropic: eu-central-1; anthropic processor: Anthropic (Ireland); DPA: trust/dpas/anthropic.txt"
+    answer: "anthropic: eu-central-1; openai: us-east-1; anthropic processor: Anthropic (Ireland); DPA: trust/dpas/anthropic.txt"
     cite:
       - "trust/dpas/anthropic.txt"
       - "trust/manual.yml"
@@ -30,6 +32,7 @@ questions:
     evidence:
       - "trust/dpas/anthropic.txt"
       - "trust/manual.yml:5"
+      - "trust/manual.yml:9"
       - "trust/subprocessors.yml:2"
   - id: Q5_human_oversight
     question: "Is human oversight required?"
@@ -37,7 +40,7 @@ questions:
     cite:
       - "trust/manual.yml"
     evidence:
-      - "trust/manual.yml:14"
+      - "trust/manual.yml:18"
   - id: Q6_high_risk_ai_act
     question: "Is this high-risk under the EU AI Act?"
     answer: "draft / see approval"
@@ -49,17 +52,17 @@ questions:
     cite:
       - "trust/manual.yml"
     evidence:
-      - "trust/manual.yml:11"
+      - "trust/manual.yml:15"
   - id: Q8_customer_kill_switch
     question: "Can the customer turn AI off?"
     answer: "yes"
     cite:
       - "trust/manual.yml"
     evidence:
-      - "trust/manual.yml:17"
+      - "trust/manual.yml:21"
   - id: Q9_prompt_retention
     question: "How long does each AI provider retain prompts and customer data?"
-    answer: "anthropic: 30 days"
+    answer: "anthropic: 30 days; openai: unknown"
     cite:
       - "trust/deletion-anthropic.md"
       - "trust/dpas/anthropic.txt"
@@ -67,10 +70,10 @@ questions:
     evidence:
       - "trust/deletion-anthropic.md:1"
       - "trust/dpas/anthropic.txt:1"
-      - "trust/manual.yml:21"
+      - "trust/manual.yml:25"
   - id: Q10_provider_training_use
     question: "Is prompt or customer data used to train provider models?"
-    answer: "anthropic: not used for training"
+    answer: "anthropic: not used for training; openai: unknown"
     cite:
       - "trust/deletion-anthropic.md"
       - "trust/dpas/anthropic.txt"
@@ -78,10 +81,10 @@ questions:
     evidence:
       - "trust/deletion-anthropic.md:1"
       - "trust/dpas/anthropic.txt:1"
-      - "trust/manual.yml:21"
+      - "trust/manual.yml:25"
   - id: Q11_deletion_path
     question: "How is deletion of prompts and customer data requested?"
-    answer: "anthropic: trust/deletion-anthropic.md"
+    answer: "anthropic: trust/deletion-anthropic.md; openai: unknown"
     cite:
       - "trust/deletion-anthropic.md"
       - "trust/dpas/anthropic.txt"
@@ -89,7 +92,7 @@ questions:
     evidence:
       - "trust/deletion-anthropic.md:1"
       - "trust/dpas/anthropic.txt:1"
-      - "trust/manual.yml:21"
+      - "trust/manual.yml:25"
 coverage:
   - "This card describes only what AI TrustBOM detected in tracked repository files and what Trust declared manually. It does not establish that other AI use is absent: files, ecosystems and runtime behaviour outside the method below may contain AI use that was not detected."
   - "Detector packs used: assist-dotnet 1.0.0; assist-go 1.0.0; assist-java 1.0.0; assist-js 1.7.0; assist-python 1.4.0; data-processing 1.0.0; raw-http 1.0.0"
