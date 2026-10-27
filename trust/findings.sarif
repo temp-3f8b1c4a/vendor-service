@@ -10,7 +10,28 @@
           "informationUri": "https://github.com/resolveinterim/AI.TrustBOM"
         }
       },
-      "results": []
+      "results": [
+        {
+          "ruleId": "subprocessor-undeclared",
+          "level": "warning",
+          "message": {
+            "text": "Provider \u0027openai\u0027 has no declared subprocessor."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "trust/manual.yml"
+                },
+                "region": {
+                  "startLine": 9,
+                  "endLine": 9
+                }
+              }
+            }
+          ]
+        }
+      ]
     }
   ]
 }
