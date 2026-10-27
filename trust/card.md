@@ -6,9 +6,9 @@
 
 - **System:** vendor-service
 - **Repository:** `vendor-service`
-- **Commit:** `d7b48ccb4b26924b128ffc915c831a18f5f731e4`
-- **Graph fingerprint:** `8e478971e534`
-- **Full fingerprint (SHA-256):** `8e478971e5342d1e1c442287c245561de7add4db2380a27422acd75a775bd5e6`
+- **Commit:** `402c56a44fd15e952edacb143bb01e63a884a81a`
+- **Graph fingerprint:** `efc2dca15727`
+- **Full fingerprint (SHA-256):** `efc2dca157274f8273e09d48771a47604baf0000c3a2f1ea434f551707bdf1e9`
 - **CLI version:** `1.0.0`
 - **Description:** Disposable AI TrustBOM manual-test vendor service
 - **Customer-facing name:** Vendor Service
@@ -25,6 +25,7 @@
 | Provider | Model | Region | Endpoint | Source | Cite |
 |---|---|---|---|---|---|
 | anthropic | claude-sonnet-4-5 | eu-central-1 | unknown | manual | `trust/manual.yml:5` |
+| openai | gpt-4o | eu-west-1 | unknown | manual | `trust/manual.yml:9` |
 
 ## Declared subprocessors
 
@@ -38,7 +39,8 @@ Trust declares, for each AI provider used by this system, how long prompts and c
 
 | Provider | Prompt retention | Training use | Deletion path | Source | Cite |
 |---|---|---|---|---|---|
-| anthropic | 30 days | not used for training | trust/deletion-anthropic.md | manual | `trust/deletion-anthropic.md:1`<br>`trust/dpas/anthropic.txt:1`<br>`trust/manual.yml:21` |
+| anthropic | 30 days | not used for training | trust/deletion-anthropic.md | manual | `trust/deletion-anthropic.md:1`<br>`trust/dpas/anthropic.txt:1`<br>`trust/manual.yml:25` |
+| openai | unknown | unknown | unknown | undeclared | none |
 
 ## Tools
 
@@ -62,9 +64,9 @@ Trust declares, for each AI provider used by this system, how long prompts and c
 
 | Control | Value | Source | Cite |
 |---|---|---|---|
-| human_send_required | true | manual | `trust/manual.yml:14` |
-| kill_switch | true | manual | `trust/manual.yml:17` |
-| prompt_bodies_stored | false | manual | `trust/manual.yml:11` |
+| human_send_required | true | manual | `trust/manual.yml:18` |
+| kill_switch | true | manual | `trust/manual.yml:21` |
+| prompt_bodies_stored | false | manual | `trust/manual.yml:15` |
 
 ## Evaluation gates
 
@@ -76,7 +78,7 @@ Trust declares, for each AI provider used by this system, how long prompts and c
 
 | ID | Severity | Message | Cite |
 |---|---|---|---|
-| none | info | No open scan findings. | none |
+| subprocessor-undeclared | medium | Provider 'openai' has no declared subprocessor. | `trust/manual.yml:9` |
 
 ## Coverage statement
 
@@ -116,40 +118,60 @@ Ecosystems are recognised from tracked manifest and lockfile names only; an ecos
 
 ## Generated from
 
-Commit `d7b48ccb4b26924b128ffc915c831a18f5f731e4` using AI TrustBOM CLI `1.0.0`.
+Commit `402c56a44fd15e952edacb143bb01e63a884a81a` using AI TrustBOM CLI `1.0.0`.
 
 ## Gate assessment
 
-- **Status:** bootstrap required
-- **Summary:** The gate is blocked because this repository has no reviewed graph approval.
+- **Status:** failed
+- **Summary:** The gate is blocked by 2 conditions.
 
 ### Semantic changes
 
-No semantic graph changes are available.
+- Added model openai / gpt-4o.
+- Added medium finding subprocessor-undeclared.
 
 ### Required actions
 
-#### No approval file exists
+#### The approved graph does not match this change
 
-AI TrustBOM could not find trust/approvals.yml. The first graph must be reviewed by Trust before it can become the baseline.
+Trust approved fingerprint 8e478971e534, but this branch produces efc2dca15727.
 
 Choose the appropriate resolution:
 
-- Review the generated system card and repository evidence.
-- Create trust/approvals.yml from the template below and complete every human-owned value.
-- Request the configured Trust or CODEOWNER review; check the full graph before approving its fingerprint.
+- Revert or correct unintended AI-system changes.
+- Add a reasoned manual declaration when repository evidence is incomplete.
+- If the changes are intended, have Trust review the semantic changes and complete graph before approving the current fingerprint.
 
 Example:
 
 ```yaml
-approved_graph_sha: 8e478971e5342d1e1c442287c245561de7add4db2380a27422acd75a775bd5e6
-approved_by: <Trust reviewer>
-approved_at: <ISO-8601 timestamp>
-high_risk: unset
-article_50: unset
+approved_graph_sha: efc2dca157274f8273e09d48771a47604baf0000c3a2f1ea434f551707bdf1e9
+```
+
+#### Finding subprocessor-undeclared is not waived
+
+The subprocessor-undeclared finding is medium. This workflow blocks medium or higher, and no active waiver covers it.
+
+Evidence:
+
+- `trust/manual.yml:9`
+
+Choose the appropriate resolution:
+
+- Fix the underlying finding and rerun the scan.
+- If Trust accepts the risk temporarily, add or renew a time-bounded waiver with a reason and reviewer.
+
+Example:
+
+```yaml
+waivers:
+  - finding_id: 'subprocessor-undeclared'
+    reason: <why the risk is accepted temporarily>
+    until: <yyyy-MM-dd>
+    by: <Trust reviewer>
 ```
 
 ### Next step
 
-Have Trust review graph fingerprint 8e478971e534 and commit trust/approvals.yml. Copy the full fingerprint from the approval template above.
+Resolve every blocking condition below, then rerun AI TrustBOM.
 
