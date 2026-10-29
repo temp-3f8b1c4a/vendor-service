@@ -1,0 +1,19 @@
+# AI TrustBOM unsigned approval template
+# Run `trustbom scan`, review trust/card.md and its cited evidence, then
+# replace these comments with the approval template printed by `trustbom gate`.
+# approved_graph_sha: <full reviewed graph fingerprint (64 lowercase hex characters)>
+# approved_by: <Trust reviewer>
+# approved_at: <ISO-8601 timestamp with offset>
+# high_risk: unset
+# article_50: unset
+approved_graph_sha: fbec3a3585c1dc4859a08a0ba2e7f3df13a8042a1eb1acbc6fb0707e9e033297
+approved_by: "trustbom-trust"
+approved_at: 2026-10-29T16:45:50Z
+high_risk: no
+article_50: not_applicable
+
+waivers:
+  - finding_id: subprocessor-undeclared
+    reason: Synthetic fixture, accepted for this test.
+    until: 2099-12-31
+    by: trust@example.com
