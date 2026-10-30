@@ -6,9 +6,9 @@
 
 - **System:** vendor-service
 - **Repository:** `vendor-service`
-- **Commit:** `cbe1060e428862456dd438e7bf59f6e44952a36d`
-- **Graph fingerprint:** `fbec3a3585c1`
-- **Full fingerprint (SHA-256):** `fbec3a3585c1dc4859a08a0ba2e7f3df13a8042a1eb1acbc6fb0707e9e033297`
+- **Commit:** `0afb013661426c1f52094ce131d8b05b7c644f92`
+- **Graph fingerprint:** `9c9284a987de`
+- **Full fingerprint (SHA-256):** `9c9284a987de8258fa889edfae9a89e12be080c3d13dee66d6dfbcb8cc3ed531`
 - **CLI version:** `1.0.0`
 - **Description:** Disposable AI TrustBOM manual-test vendor service
 - **Customer-facing name:** Vendor Service
@@ -24,7 +24,7 @@
 
 | Provider | Model | Region | Endpoint | Source | Cite |
 |---|---|---|---|---|---|
-| anthropic | claude-sonnet-4-5 | eu-central-1 | unknown | manual | `trust/manual.yml:5` |
+| anthropic | claude-sonnet-4-5 | us-east-2 | unknown | manual | `trust/manual.yml:5` |
 | openai | gpt-4o | us-east-1 | unknown | manual | `trust/manual.yml:9` |
 
 ## Declared subprocessors
@@ -118,19 +118,5 @@ Ecosystems are recognised from tracked manifest and lockfile names only; an ecos
 
 ## Generated from
 
-Commit `cbe1060e428862456dd438e7bf59f6e44952a36d` using AI TrustBOM CLI `1.0.0`.
-
-## Gate assessment
-
-- **Status:** passed
-- **Summary:** The current graph matches its approval and has no blocking policy conditions.
-
-### Semantic changes
-
-- Added model openai / gpt-4o.
-- Added medium finding subprocessor-undeclared.
-
-### Next step
-
-No approval action is required.
+Commit `0afb013661426c1f52094ce131d8b05b7c644f92` using AI TrustBOM CLI `1.0.0`.
 

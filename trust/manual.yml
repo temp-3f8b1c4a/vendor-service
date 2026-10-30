@@ -4,7 +4,7 @@ not_in_scope: []
 models:
   - provider: anthropic
     model_id: claude-sonnet-4-5
-    region: eu-central-1
+    region: us-east-2
     reason: Synthetic deployment declared for this manual test.
   - provider: openai
     model_id: gpt-4o

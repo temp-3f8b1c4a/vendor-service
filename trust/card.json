@@ -1,15 +1,15 @@
 {
   "schema_version": 2,
   "hash_version": 1,
-  "graph_sha": "fbec3a3585c1dc4859a08a0ba2e7f3df13a8042a1eb1acbc6fb0707e9e033297",
+  "graph_sha": "9c9284a987de8258fa889edfae9a89e12be080c3d13dee66d6dfbcb8cc3ed531",
   "system": {
     "name": "vendor-service",
     "description": "Disposable AI TrustBOM manual-test vendor service",
     "customer_facing_name": "Vendor Service"
   },
   "repo": "vendor-service",
-  "commit": "cbe1060e428862456dd438e7bf59f6e44952a36d",
-  "scanned_at": "2026-10-27T16:15:48.5924213+00:00",
+  "commit": "0afb013661426c1f52094ce131d8b05b7c644f92",
+  "scanned_at": "2026-10-30T11:27:49.2389655+00:00",
   "cli_version": "1.0.0",
   "detector_packs": [
     {
@@ -45,7 +45,7 @@
     {
       "provider": "anthropic",
       "model_id": "claude-sonnet-4-5",
-      "region": "eu-central-1",
+      "region": "us-east-2",
       "source": "manual",
       "evidence": [
         {
