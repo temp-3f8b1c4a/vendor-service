@@ -9,7 +9,7 @@ answers:
     dependencies:
       - system_id: default
         source_commit: 836664d1668b6e3f5c17f7dbcb70b621bc7d7b85
-        approval_commit: 1221e419f1d97747ff6a837027b415a2627510e6
+        approval_commit: 5936954ca531adf6dec3e6ef4e48065cb5514217
         source_graph_sha: fbec3a3585c1dc4859a08a0ba2e7f3df13a8042a1eb1acbc6fb0707e9e033297
         fields:
           - collection: models
